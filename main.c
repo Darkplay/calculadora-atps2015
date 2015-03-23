@@ -46,6 +46,16 @@ int main()
             printf ("\n\t%d - %d = %d \n",val1,val2,res);
         break;
 
+        case '*':
+            printf ("\n\n\tM U L T I P L I C A Ç Ã O");
+            printf ("\n\n\tPrimeiro Valor: ");
+            scanf ("%d", &val1);
+            printf ("\tSegundo Valor: ");
+            scanf ("%d", &val2);
+            res = val1*val2;
+            printf ("\n\t%d x %d = %d \n",val1,val2,res);
+        break;
+
 
            }
 
