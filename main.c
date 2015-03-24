@@ -65,8 +65,13 @@ int main()
             scanf ("%d", &val1);
             printf ("\tSegundo Valor: ");
             scanf ("%d", &val2);
-            res = val1/val2;
-            printf ("\n\t%d / %d = %d \n\n",val1,val2,res);
+            if(val2==0){
+                printf("\n\tImpossivel realizar divisão por zero\n\n");
+            }
+            else{
+                res = val1/val2;
+                printf("\n\t%d / %d = %d \n\n",val1,val2,res);
+            }
         break;
 
         case 'e':
