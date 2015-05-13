@@ -23,7 +23,7 @@ int main()
            "\n\t(S) - Sair\n\n");
 
     char op;
-    int val1, val2, res;
+    float val1, val2, res;
     double rraiz;
     printf("\tOpção: ");
     op = getch(); // usado para nao precisar teclar enter ao escolher a opção
@@ -32,45 +32,45 @@ int main()
         case '+':
             printf ("\n\n\n\tS O M A");
             printf ("\n\n\tPrimeiro Valor: ");
-            scanf ("%d", &val1);
+            scanf ("%f", &val1);
             printf ("\tSegundo Valor: ");
-            scanf ("%d", &val2);
+            scanf ("%f", &val2);
             res = val1+val2;
-            printf ("\n\t%d + %d = %d \n\n",val1,val2,res);
+            printf ("\n\t%.2f + %.2f = %.2f \n\n",val1,val2,res);
         break;
 
         case '-':
             printf ("\n\n\n\tS U B T R A Ç Ã O");
             printf ("\n\n\tPrimeiro Valor: ");
-            scanf ("%d", &val1);
+            scanf ("%f", &val1);
             printf ("\tSegundo Valor: ");
-            scanf ("%d", &val2);
+            scanf ("%f", &val2);
             res = val1-val2;
-            printf ("\n\t%d - %d = %d \n\n",val1,val2,res);
+            printf ("\n\t%.2f - %.2f = %.2f \n\n",val1,val2,res);
         break;
 
         case '*':
             printf ("\n\n\n\tM U L T I P L I C A Ç Ã O");
             printf ("\n\n\tPrimeiro Valor: ");
-            scanf ("%d", &val1);
+            scanf ("%f", &val1);
             printf ("\tSegundo Valor: ");
-            scanf ("%d", &val2);
+            scanf ("%f", &val2);
             res = val1*val2;
-            printf ("\n\t%d x %d = %d \n\n",val1,val2,res);
+            printf ("\n\t%.2f x %.2f = %.2f \n\n",val1,val2,res);
         break;
 
         case '/':
             printf ("\n\n\n\tD I V I S Ã O");
             printf ("\n\n\tPrimeiro Valor: ");
-            scanf ("%d", &val1);
+            scanf ("%f", &val1);
             printf ("\tSegundo Valor: ");
-            scanf ("%d", &val2);
+            scanf ("%f", &val2);
             if(val2==0){
                 printf("\n\tImpossivel realizar divisão por zero\n\n");
             }
             else{
                 res = val1/val2;
-                printf("\n\t%d / %d = %d \n\n",val1,val2,res);
+                printf("\n\t%.2f / %.2f = %.2f \n\n",val1,val2,res);
             }
         break;
 
@@ -78,35 +78,35 @@ int main()
         case 'E':
             printf("\n\n\n\tE X P O N E N C I A Ç Ã O");
             printf("\n\n\tDigite a base: ");
-            scanf("%d",&val1);
+            scanf("%f",&val1);
             printf("\tDigite o expoente: ");
-            scanf("%d",&val2);
+            scanf("%f",&val2);
 
             res = pow(val1,val2);//função definida em math.h para calcular a potência
 
-            printf("\n\t%d elevado a %d é igual a %d\n\n",val1,val2,res);
+            printf("\n\t%.2f elevado a %.2f é igual a %.2f\n\n",val1,val2,res);
         break;
 
         case 'r':
         case 'R':
             printf("\n\n\n\tR A I Z  Q U A D R A D A");
             printf("\n\n\tDigite o valor que deseja obter a raiz: ");
-            scanf("%d", &val1);
+            scanf("%f", &val1);
 
             rraiz = sqrt(val1);
 
-            printf("\n\tA raiz de[%d] é: %.3f\n\n",val1,rraiz);
+            printf("\n\tA raiz de[%f] é: %.3f\n\n",val1,rraiz);
         break;
 
         case 'p':
         case 'P':
             printf("\n\n\n\tP O R C E N T A G E M");
             printf("\n\n\tDigite a porcentagem: ");
-            scanf("%d",&val1);
+            scanf("%f",&val1);
             printf("\n\n\tDigite o valor que você quer tirar a porcentagem: ");
-            scanf("%d",&val2);
+            scanf("%f",&val2);
             rraiz = (val1*val2)/100;
-            printf("\n\t%d %% de %.2d é: %.2f \n\n",val1,val2,rraiz);
+            printf("\n\t%f %% de %.2f é: %.2f \n\n",val1,val2,rraiz);
         break;
 
         case 's':
